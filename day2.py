@@ -102,7 +102,10 @@ def display():
         lang.append('English')
     if var2.get() == 1:
         lang.append('Hindi')
-    print('Language: ' + str(var1.get()) + str(var2.get()))
+    print('Language: ', end= '')
+    for lan in lang:
+        print(lan, end=' ')
+    print()
     print('Address: ' + add.get())
     print("Whatsapp number: " + wnum.get())
     print('Profession: ' + prof_var.get())
