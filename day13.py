@@ -7,9 +7,9 @@ def prog1(string):
 def prog2(text):
     patterns = '\w*ab.\w*'
     if re.search(patterns,  text):
-            return 'Found a match!'
+        return 'Found a match!'
     else:
-            return('Not matched!')
+        return('Not matched!')
 
 def prog3(string):
     text = re.compile(r".*[0-9]$")
