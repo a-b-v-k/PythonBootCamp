@@ -1,5 +1,4 @@
 import mysql.connector
-import xlrd
 
 mydb = mysql.connector.connect(
   host="localhost",
