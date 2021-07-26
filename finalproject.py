@@ -14,6 +14,8 @@ for r in range(0, sheet.nrows):
     name = str(sheet.cell(r, 0).value)
     course = 'course on ' + str(sheet.cell(r, 1).value)
     sign = str(sheet.cell(r, 3).value)
+
+    # Retrieve the current date
     cur_d = str(date.today().strftime("%d/%m/%Y"))
 
 
@@ -48,7 +50,7 @@ for r in range(0, sheet.nrows):
     d.text((loc_d[0]-w//2, loc_d[1]), cur_d, fill=text_color,font=font_date)
 
     # Write the signature on the template
-    font_sign = ImageFont.truetype("Standlist-RpBYV.ttf", 30)
+    font_sign = ImageFont.truetype("Standlist-RpBYV.ttf", 30) # Custom font -- To be installed seperately
     w, h = font_sign.getsize(sign)
     d.text((loc_sign[0]-w//2, loc_sign[1]), sign, fill=text_color,font=font_sign)
 
